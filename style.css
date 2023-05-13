@@ -1,0 +1,52 @@
+nav {
+    background-color: #333;
+    color: #fff;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+main {
+    margin-left: 20rem;
+}
+
+main div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main div figure img {
+    width: 15%;
+    height: 15%;
+    display: block;
+    margin: auto;
+}
+
+main div div h2 {
+    font-size: 3.5rem;
+}
+
+main div div p {
+    font-size: x-large;
+}

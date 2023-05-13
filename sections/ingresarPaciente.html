@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <h1>Hospital ANEX</h1>
+                <ul>
+                    <li><a href="../sections/ingresarPaciente.html">Ingresar Paciente</a></li>
+                    <li><a href="../sections/verPaciente.html">Ver Paciente</a></li>
+                    <li><a href="../sections/evolucionPaciente.html">Evolucion de Paciente</a></li>
+                    <li><a href="../sections/egresos.html">Egresos</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <figure>
+                <img src="../img/logo.jpg" alt="logo del Hospital ANEX">
+            </figure>
+            <div>
+                <h2>Ingreso de Pacientes</h2>
+            </div>
+        </div>
+        <div>
+            <p id="parrafoIngreso">Ingrese todos los datos del paciente</p>
+        </div>
+        <section>
+            <form action="">
+                <fieldset>
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" name="nombre" id="nombre" required>
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido</label>
+                        <input type="text" name="apellido" id="apellido" required>
+                    </div>
+                    <div>
+                        <label for="documento">N° de Documento</label>
+                        <input type="number" name="documento" id="documento" required>
+                    </div>
+                    <div>
+                        <label for="habitacion">N° de Habitación</label>
+                        <input type="number" name="habitacion" id="habitacion" required>
+                    </div>
+                    <div>
+                        <label for="medico">Médico a cargo</label>
+                        <input type="text" name="medico" id="medico" required>
+                    </div>
+                    <div>
+                        <label for="diagnostico">Diagnóstico</label>
+                        <textarea name="diagnostico" id="diagnostico" cols="50" rows="2" required></textarea>
+                    </div>
+                    <div>
+                        <input id="RegistrarPaciente" type="submit" value="Registrar Paciente">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <script src="../main.js"></script>
+</body>
+
+</html>
