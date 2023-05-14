@@ -59,8 +59,15 @@ if(buscarPaciente){
     buscarPaciente.addEventListener("click", (e) => {
         e.preventDefault();
 
+        // Por ejemplo aca estaba poniendo el get item y creando una nueva const
+        const listaGuardada = JSON.parse(localStorage.getItem("listaDePacientes"));
+
         let consultarPaciente = document.getElementById("consultarPaciente");
-        const EncontrarPaciente = listaDePacientes.find(paciente => paciente.documento == consultarPaciente.value);
+        // Y aca a esta constante -->  const EncontrarPaciente = listaDePacientes.find(paciente => paciente.documento == consultarPaciente.value); le cambiaba el lugar en donde buscar con el find para que quede asi
+
+        //Lo que me pasa si hago esto es que, si es la primera vez que entro o limpio el localstorage, no encuentra la "base de datos". Y para que empiece a funcionar todo primero si o si deberia registrar a un paciente y luego de eso, ya al tener el localstorage lo demas empezaria a funcionar. Justamente lo que quiero es que funcione de entrada sin tener que registrar a un paciente
+
+        const EncontrarPaciente = listaGuardada.find(paciente => paciente.documento == consultarPaciente.value);
 
         if (EncontrarPaciente) {
             mostrarPaciente.innerHTML = `Nombre: ${EncontrarPaciente.nombre} <br>
@@ -82,9 +89,13 @@ const busquedaParaEvolucion = document.getElementById("busquedaParaEvolucion");
 if (busquedaParaEvolucion){
     busquedaParaEvolucion.addEventListener("click", (e) => {
         e.preventDefault();
+
+        // ACA OTRO EJEMPLO!
+
+        const listaGuardada = JSON.parse(localStorage.getItem("listaDePacientes"));
         
         let consultaParaEvolucion = document.getElementById("consultaParaEvolucion");
-        const EncontrarParaEvolucion = listaDePacientes.find(paciente => paciente.documento == consultaParaEvolucion.value);
+        const EncontrarParaEvolucion = listaGuardada.find(paciente => paciente.documento == consultaParaEvolucion.value);
     
         if (EncontrarParaEvolucion) {
             evolucion.innerHTML =  `<p>Ingrese la evolución del paciente</p>
@@ -95,6 +106,8 @@ if (busquedaParaEvolucion){
             enviarEvolucion.addEventListener("click", () => {
                 let aniadirEvolucion = document.getElementById("aniadirEvolucion");
                 EncontrarParaEvolucion.diagnostico += aniadirEvolucion.value;
+
+                localStorage.setItem("listaDePacientes", JSON.stringify(listaDePacientes));
     
                 evolucion.innerText = `La evolucion se ha cargado correctamente`
             })
@@ -111,9 +124,10 @@ const busquedaParaEgreso = document.getElementById("busquedaParaEgreso");
 if(busquedaParaEgreso){
     busquedaParaEgreso.addEventListener("click", () => {
 
+        const listaGuardada = JSON.parse(localStorage.getItem("listaDePacientes"));
 
         let consultaParaEgreso = document.getElementById("consultaParaEgreso");
-        const EncontrarParaEgreso = listaDePacientes.find(paciente => paciente.documento == consultaParaEgreso.value);
+        const EncontrarParaEgreso = listaGuardada.find(paciente => paciente.documento == consultaParaEgreso.value);
     
         if (EncontrarParaEgreso) {
             egreso.innerHTML =  `El siguiente paciente va a ser egresado. Esta seguro que desea continuar?
@@ -131,7 +145,7 @@ if(busquedaParaEgreso){
                 let buscarEnLista = listaDePacientes.indexOf(EncontrarParaEgreso);
                 listaDePacientes.splice(buscarEnLista, 1);
 
-
+                localStorage.setItem("listaDePacientes", JSON.stringify(listaDePacientes));
     
                 egreso.innerHTML = `El paciente a sido dado de alta exitomasemente`;
             })
