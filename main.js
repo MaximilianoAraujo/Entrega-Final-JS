@@ -37,6 +37,8 @@ if (RegistrarPaciente) {
         const nuevoPaciente = new Paciente(nombre.value, apellido.value, documento.value, habitacion.value, medico.value, diagnostico.value);
         listaDePacientes.push(nuevoPaciente);
 
+        localStorage.setItem("listaDePacientes", JSON.stringify(listaDePacientes));
+
         const parrafoIngreso = document.getElementById("parrafoIngreso");
         parrafoIngreso.innerText = `Paciente registrado exitosamente!`;
 
@@ -46,21 +48,100 @@ if (RegistrarPaciente) {
         habitacion.value = "";
         medico.value = "";
         diagnostico.value = "";
-        console.log(listaDePacientes)
     });
 }
 
 
 //SECCION DE CONSULTA DE DATOS
 const buscarPaciente = document.getElementById("buscarPaciente");
-let consultarPaciente = document.getElementById("consultarPaciente");
 
-buscarPaciente.addEventListener("click", (e) => {
-    e.preventDefault();
-    const EncontrarPaciente = listaDePacientes.find(paciente => paciente.documento === consultarPaciente.value);
-    console.log(EncontrarPaciente)
-});
+if(buscarPaciente){
+    buscarPaciente.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        let consultarPaciente = document.getElementById("consultarPaciente");
+        const EncontrarPaciente = listaDePacientes.find(paciente => paciente.documento == consultarPaciente.value);
+
+        if (EncontrarPaciente) {
+            mostrarPaciente.innerHTML = `Nombre: ${EncontrarPaciente.nombre} <br>
+                                    Apellido: ${EncontrarPaciente.apellido} <br>
+                                    Documento: ${EncontrarPaciente.documento} <br>
+                                    Habitacion: ${EncontrarPaciente.habitacion} <br>
+                                    Medico: ${EncontrarPaciente.medico} <br>
+                                    Diagnostico: ${EncontrarPaciente.diagnostico}`;
+        } else {
+            mostrarPaciente.innerHTML = "Paciente no encontrado.";
+        }
+    });
+}
 
 
+//SECCION DE EVOLUCION
+const busquedaParaEvolucion = document.getElementById("busquedaParaEvolucion");
 
+if (busquedaParaEvolucion){
+    busquedaParaEvolucion.addEventListener("click", (e) => {
+        e.preventDefault();
+        
+        let consultaParaEvolucion = document.getElementById("consultaParaEvolucion");
+        const EncontrarParaEvolucion = listaDePacientes.find(paciente => paciente.documento == consultaParaEvolucion.value);
+    
+        if (EncontrarParaEvolucion) {
+            evolucion.innerHTML =  `<p>Ingrese la evolución del paciente</p>
+                                    <textarea name="aniadirEvolucion" id="aniadirEvolucion" cols="30" rows="10"></textarea>
+                                    <button id="enviarEvolucion">Añadir Evolucion</button>`
+    
+            const enviarEvolucion = document.getElementById("enviarEvolucion");
+            enviarEvolucion.addEventListener("click", () => {
+                let aniadirEvolucion = document.getElementById("aniadirEvolucion");
+                EncontrarParaEvolucion.diagnostico += aniadirEvolucion.value;
+    
+                evolucion.innerText = `La evolucion se ha cargado correctamente`
+            })
+    
+        } else {
+            evolucion.innerHTML = "Paciente no encontrado.";
+        }
+    })
+}
+
+//SECCION DE EGRESO
+const busquedaParaEgreso = document.getElementById("busquedaParaEgreso");
+
+if(busquedaParaEgreso){
+    busquedaParaEgreso.addEventListener("click", () => {
+
+
+        let consultaParaEgreso = document.getElementById("consultaParaEgreso");
+        const EncontrarParaEgreso = listaDePacientes.find(paciente => paciente.documento == consultaParaEgreso.value);
+    
+        if (EncontrarParaEgreso) {
+            egreso.innerHTML =  `El siguiente paciente va a ser egresado. Esta seguro que desea continuar?
+                                Nombre: ${EncontrarParaEgreso.nombre} <br>
+                                Apellido: ${EncontrarParaEgreso.apellido} <br>
+                                Documento: ${EncontrarParaEgreso.documento} <br>
+                                Habitacion: ${EncontrarParaEgreso.habitacion} <br>
+                                <button id="aceptar">Aceptar</button>
+                                <button id="cancelar">Cancelar</button>`;
+    
+            const aceptar = document.getElementById("aceptar");
+            const cancelar = document.getElementById("cancelar");
+    
+            aceptar.addEventListener("click", () => {
+                let buscarEnLista = listaDePacientes.indexOf(EncontrarParaEgreso);
+                listaDePacientes.splice(buscarEnLista, 1);
+
+
+    
+                egreso.innerHTML = `El paciente a sido dado de alta exitomasemente`;
+            })
+    
+            cancelar.addEventListener("click", () => {
+                egreso.innerHTML = `Accion cancelada`;
+            })
+        } else {
+            egreso.innerHTML = "Paciente no encontrado.";
+        }
+    });
+}
 

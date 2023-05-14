@@ -33,10 +33,18 @@
             </div>
         </div>
         <section>
-            <textarea cols="200" rows="20" required></textarea>
+            <div>
+                <label for="consultaParaEvolucion">Ingrese el numero de DNI del Paciente</label>
+                <input id="consultaParaEvolucion" type="number" name="consultaParaEvolucion" required>
+            </div>
+            <div>
+                <input id="busquedaParaEvolucion" type="submit" value="Buscar">
+            </div>
+            <div id="evolucion"></div>
         </section>
     </main>
     <script src="../main.js"></script>
 </body>
 
 </html>
+
