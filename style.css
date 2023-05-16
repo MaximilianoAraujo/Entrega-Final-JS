@@ -168,12 +168,12 @@ label {
     cursor: pointer;
 }
 
-.estiloMostrarPaciente{
+.estiloMostrarPaciente {
     display: block;
     margin: 0.6em auto;
     width: 50%;
     border: 3px solid #78a2bd;
-    background-color:#dee7ec ;
+    background-color: #dee7ec;
     font-size: 1.1em;
     text-align: center;
 }
@@ -190,7 +190,8 @@ label {
     margin: 2em 0 0;
 }
 
-.aniadir, .btnAceptar {
+.aniadir,
+.btnAceptar {
     margin: 1em auto 0;
     width: 25%;
     background-color: #4a834b;
@@ -209,7 +210,7 @@ label {
 
 .textoCorrecto {
     color: green;
-    font-weight:400;
+    font-weight: 400;
 }
 
 .btnCancelar {
