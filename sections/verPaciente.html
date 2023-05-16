@@ -6,41 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Document</title>
+    <title>Consulta |Hospital ANEX|</title>
 </head>
 
 <body>
     <header>
         <nav>
-            <div>
+            <div class="containerNav">
+                <img class="logoNav" src="../img/logo.jpg" alt="logo del Hospital ANEX">
                 <h1>Hospital ANEX</h1>
+            </div>
+            <div class="containerSecciones">
                 <ul>
-                    <li><a href="../sections/ingresarPaciente.html">Ingresar Paciente</a></li>
-                    <li><a href="../sections/verPaciente.html">Ver Paciente</a></li>
-                    <li><a href="../sections/evolucionPaciente.html">Evolucion de Paciente</a></li>
-                    <li><a href="../sections/egresos.html">Egresos</a></li>
+                    <li class="itemNav"><a href="../sections/ingresarPaciente.html">Ingresar Paciente</a></li>
+                    <li class="itemNav"><a href="../sections/verPaciente.html">Ver Paciente</a></li>
+                    <li class="itemNav"><a href="../sections/evolucionPaciente.html">Evolución de Paciente</a></li>
+                    <li class="itemNav"><a href="../sections/egresos.html">Egresos</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main>
         <div>
-            <figure>
-                <img src="../img/logo.jpg" alt="logo del Hospital ANEX">
-            </figure>
             <div>
-                <h2>Consultar datos de Paciente</h2>
+                <h2>Consultar datos de Pacientes</h2>
             </div>
         </div>
         <section>
             <div>
-                <label for="consultarPaciente">Ingrese el numero de DNI del Paciente</label>
-                <input id="consultarPaciente" type="number" name="consultarPaciente" required>
+                <P class="parrafoSeccion">Ingrese el número de DNI del Paciente</P>
             </div>
-            <div>
-                <input id="buscarPaciente" type="submit" value="Buscar">
+            <div class="containerBusquedaConsulta">
+                <input class="inputConsulta" id="consultarPaciente" type="number" name="consultarPaciente">
+                <input class="inputBusquedaConsulta" id="buscarPaciente" type="submit" value="Buscar">
             </div>
-            <div id="mostrarPaciente"></div>
+            <div class="parrafoSeccion" id="mostrarPaciente"></div>
         </section>
     </main>
     <script src="../main.js"></script>

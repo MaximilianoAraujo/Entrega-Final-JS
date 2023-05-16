@@ -1,5 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f8ff;
+}
+
 nav {
-    background-color: #333;
+    background-color: #234050;
     color: #fff;
     width: 200px;
     height: 100vh;
@@ -16,37 +27,199 @@ ul {
 }
 
 li {
-    margin-bottom: 10px;
+    margin: 1em 0;
+    font-family: Poppins;
+    font-size: 1.1em;
 }
 
 a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2em;
 }
 
 main {
-    margin-left: 20rem;
+    margin-left: 14.5rem;
 }
 
-main div div {
+.containerH2 {
+    padding: 0;
+}
+
+.containerNav {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-main div figure img {
+.logoMain {
     width: 15%;
     height: 15%;
     display: block;
     margin: auto;
 }
 
-main div div h2 {
+.logoNav {
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    border-radius: 50%;
+}
+
+h1 {
+    font-family: Poppins;
+    font-size: 1.4em;
+    text-align: center;
+}
+
+h2 {
+    background-color: #78a2bd;
+    padding: 0.3em 0.6em;
     font-size: 3.5rem;
+}
+
+.subTituloIndex {
+    background-color: #f0f8ff;
+    text-align: center;
+}
+
+.parrafoIndex {
+    text-align: center;
+    font-size: 2em;
+}
+
+.parrafoSeccion {
+    font-size: 1.5em;
+    font-family: Poppins;
+    padding: 2em 1.75em;
+    text-align: center;
+}
+
+.containerSecciones {
+    margin-top: 4em;
 }
 
 main div div p {
     font-size: x-large;
+}
+
+.containerForm {
+    width: 50%;
+    margin: 0 auto;
+    font-family: Poppins;
+}
+
+fieldset {
+    border: 2px solid #78a2bd;
+    border-radius: 1em;
+    padding: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+.inputIngreso {
+    width: 97%;
+    padding: 0.2em 0em 0.2em 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #a9d0e9;
+    font-size: 1.25em;
+}
+
+.inputRegistrar {
+    background-color: #4a834b;
+    color: white;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.containerBtn {
+    display: flex;
+    justify-content: center;
+}
+
+.containerBusquedaConsulta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inputConsulta {
+    width: 20%;
+    border: 1px solid #a9d0e9;
+    font-size: 1.37em;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+}
+
+.inputBusquedaConsulta {
+    width: 10%;
+    font-size: 1em;
+    background-color: #4a834b;
+    color: white;
+    font-weight: bold;
+    padding: 0.33em 0em;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+
+.estiloMostrarPaciente{
+    display: block;
+    margin: 0.6em auto;
+    width: 50%;
+    border: 3px solid #78a2bd;
+    background-color:#dee7ec ;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.estiloValue {
+    color: #0b6799;
+    display: block;
+    margin: 0 auto;
+}
+
+.containerInputEvo {
+    display: flex;
+    flex-direction: column;
+    margin: 2em 0 0;
+}
+
+.aniadir, .btnAceptar {
+    margin: 1em auto 0;
+    width: 25%;
+    background-color: #4a834b;
+    color: white;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.inputEvolucion {
+    border: 1px solid #a9d0e9;
+    font-size: 1.37em;
+}
+
+.textoCorrecto {
+    color: green;
+    font-weight:400;
+}
+
+.btnCancelar {
+    margin: 1em auto 0;
+    width: 25%;
+    background-color: #d34a4a;
+    color: white;
+    font-weight: bold;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
 }
