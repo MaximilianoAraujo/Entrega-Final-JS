@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Consulta |Hospital ANEX|</title>
+    <title>Reingresos |Hospital ANEX|</title>
 </head>
 
 <body>
@@ -31,18 +31,18 @@
     <main>
         <div>
             <div>
-                <h2>Consultar datos de Pacientes</h2>
+                <h2>Reingreso de Pacientes</h2>
             </div>
         </div>
         <section>
             <div>
-                <P class="parrafoSeccion">Ingrese el número de documento del paciente a consultar</P>
+                <P class="parrafoSeccion">Ingrese el número de documento del paciente a reingresar</P>
             </div>
             <form class="containerBusquedaConsulta">
-                <input class="inputConsulta" id="consultarPaciente" type="number" name="consultarPaciente">
-                <button class="inputBusquedaConsulta" id="buscarPaciente">Buscar</button>
+                <input class="inputConsulta" id="consultaParaReingreso" type="number" name="consultaParaReingreso">
+                <button class="inputBusquedaConsulta" id="busquedaParaReingreso">Buscar</button>
             </form>
-            <div class="parrafoSeccion" id="mostrarPaciente"></div>
+            <div class="parrafoSeccion" id="reingreso"></div>
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

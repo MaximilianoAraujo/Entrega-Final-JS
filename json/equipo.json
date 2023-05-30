@@ -1,0 +1,10 @@
+[
+    {"medico": "Dra. Gabriela Obeso", "legajo": 138942, "especialidad": "Cardiología para adultos", "horario": "SADOFE - 10:00 a 21:00", "foto": "../img/uno.jpg" },
+    {"medico": "Dr. Shaun Murphy", "legajo": 137852, "especialidad": "Cirujia General", "horario": "Lunes a Viernes - 9:00 a 14:00", "foto": "../img/dos.jpg"},
+    {"medico": "Dra. Meredith Grey", "legajo": 123884, "especialidad": "Cirujia General", "horario": "Lunes a Viernes - 14:00 a 19:00", "foto": "../img/tres.jpg"},
+    {"medico": "Dr. Gregory House", "legajo": 116285, "especialidad": "Infectología y Nefrología", "horario": "Lunes a Viernes - 10:00 a 16:00", "foto": "../img/cuatro.jpg"},
+    {"medico": "Dr. Nick Riviera ", "legajo": 130983, "especialidad": "Clínica Médica", "horario": "Lunes a Viernes - 10:00 a 16:00", "foto": "../img/cinco.png"},
+    {"medico": "Dr. Samuel Loomis", "legajo": 102578, "especialidad": "Psiquiatría", "horario": "Lunes a Jueves - 8:00 a 15:00", "foto": "../img/seis.jpg"},
+    {"medico": "Dra. Sandra Lee", "legajo": 123789, "especialidad": "Dermatología", "horario": "Lunes a Viernes - 10:00 a 17:00", "foto": "../img/siete.jpg"},
+    {"medico": "Dr. Emmett 'Doc' Brown", "legajo": 88888, "especialidad": "Viajes en el tiempo", "horario": "Todos los dias - 00:00 a 23:59", "foto": "../img/ocho.jpg" }
+]

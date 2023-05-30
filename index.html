@@ -6,38 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Inicio |Hospital ANEX|</title>
+    <title>Bienvenido! |Hospital ANEX|</title>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="containerNav">
-                <img class="logoNav" src="img/logo.jpg" alt="logo del Hospital ANEX">
-                <h1>Hospital ANEX</h1>
-            </div>
-            <div class="containerSecciones">
-                <ul>
-                    <li class="itemNav"><a href="./sections/ingresarPaciente.html">Ingresar Paciente</a></li>
-                    <li class="itemNav"><a href="./sections/verPaciente.html">Ver Paciente</a></li>
-                    <li class="itemNav"><a href="./sections/evolucionPaciente.html">Evolución de Paciente</a></li>
-                    <li class="itemNav"><a href="./sections/egresos.html">Egresos</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
+<body class="bodyInicio">
+    <main class="mainInicio">
         <div>
-            <figure>
-                <img class="logoMain" src="img/logo.jpg" alt="logo del Hospital ANEX">
-            </figure>
-            <div>
-                <h2 class="subTituloIndex">Bienvenido al Sistema de Pacientes del Hospital ANEX</h2>
-                <p class="parrafoIndex">Seleccione una de las opciones de la barra lateral para empezar a operar el
-                    sistema.</p>
-            </div>
+            <img class="logoInicio" src="./img/logo.jpg" alt="">
+        </div>
+        <div class="contenedorInicio">
+            <form class="formInicio">
+                <div>
+                    <h3 class="h3Inicio">Iniciar Sesión</h3>
+                </div>
+                <div class="formDivInicio">
+                    <label class="labelInicio" for="usuario">Usuario:</label>
+                    <input class="usuarioInicio" type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class="formDivInicio">
+                    <label class="labelInicio" for="password">Contraseña:</label>
+                    <input class="passInicio" type="password" id="password" name="password" required>
+                </div>
+                <div class="formDivInicio">
+                    <button id="ingresar" class="ingresarInicio" type="submit">Ingresar</button>
+                </div>
+            </form>
         </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

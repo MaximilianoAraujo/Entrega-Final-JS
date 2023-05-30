@@ -9,6 +9,11 @@ body {
     background-color: #f0f8ff;
 }
 
+.bodyInicio {
+    font-family: Poppins;
+    background-image: url(./img/fondoInicio.jpg) ;
+}
+
 nav {
     background-color: #234050;
     color: #fff;
@@ -27,9 +32,16 @@ ul {
 }
 
 li {
-    margin: 1em 0;
+    margin: 2em 0;
     font-family: Poppins;
     font-size: 1.1em;
+}
+
+li:hover {
+    text-decoration: underline;
+    transform: scale(1.075);
+    transition-property: all;
+    transition-duration: 0.5s;
 }
 
 a {
@@ -41,12 +53,24 @@ main {
     margin-left: 14.5rem;
 }
 
-.containerH2 {
-    padding: 0;
+.mainInicio {
+    margin: 0;
 }
+
+/* .containerH2 {
+    padding: 0;
+} */
 
 .containerNav {
     display: flex;
+}
+
+.logoInicio {
+    width: 10%;
+    height: 10%;
+    display: block;
+    margin: 1% auto 0   ;
+    border-radius: 50%;
 }
 
 .logoMain {
@@ -69,10 +93,38 @@ h1 {
     text-align: center;
 }
 
+/* .h1Inicio {
+    font-family: Poppins;
+    text-align: center;
+    margin-top: 0.1em;
+    font-size: 3.5em;
+} */
+
 h2 {
     background-color: #78a2bd;
     padding: 0.3em 0.6em;
     font-size: 3.5rem;
+}
+
+.h3Inicio {
+    font-family: Poppins;
+    text-align: center;
+    margin-bottom: 6%;
+    font-size: 1.5em;
+    text-decoration: underline;
+}
+
+.formInicio {
+    max-width: 20%;
+    margin: 8% auto 0;
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 1em;
+    border: 1px solid #78a2bd;
+}
+
+.formDivInicio {
+    margin-bottom: 15px;
 }
 
 .subTituloIndex {
@@ -93,7 +145,7 @@ h2 {
 }
 
 .containerSecciones {
-    margin-top: 4em;
+    margin-top: 6em;
 }
 
 main div div p {
@@ -116,7 +168,13 @@ label {
     font-weight: bold;
 }
 
-.inputIngreso {
+.labelInicio {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.inputIngreso, .usuarioInicio, .passInicio {
     width: 97%;
     padding: 0.2em 0em 0.2em 0.5em;
     margin-bottom: 1em;
@@ -124,14 +182,22 @@ label {
     font-size: 1.25em;
 }
 
-.inputRegistrar {
-    background-color: #4a834b;
+.inputRegistrar, .ingresarInicio {
+    background-color: #45a049;
     color: white;
     font-weight: bold;
     padding: 1em 2em;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.inputRegistrar, .ingresarInicio:hover {
+    background-color: #398f3d;
+}
+
+.ingresarInicio {
+    width: 100%;
 }
 
 .containerBtn {
@@ -208,10 +274,10 @@ label {
     font-size: 1.37em;
 }
 
-.textoCorrecto {
+/* .textoCorrecto {
     color: green;
     font-weight: 400;
-}
+} */
 
 .btnCancelar {
     margin: 1em auto 0;
@@ -223,4 +289,47 @@ label {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+}
+
+.contenedorDoctores {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+}
+
+.divDoctores {
+    margin: 2em 5em;
+    padding: 4em 2em;
+    background-color: #e6f2fa;
+    border: 2px solid #0b6799;
+    border-radius: 10px;
+}
+
+.h3Equipo {
+    font-family: Poppins;
+    font-size: x-large;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.parrafoEquipo {
+    font-family: Poppins;
+    font-size: larger;
+    margin: 0.25em 0;
+    text-align: center;
+}
+
+.fotoMedico {
+    display: block;
+    margin: 0 auto 1.25em;
+    width: 175px;
+    height: 175px;
+    border: 4px solid #a9d0e9;
+    border-radius: 5px;
+    
+}
+
+.estiloVacio {
+    border: none;
+    background-color: #f0f8ff;
 }

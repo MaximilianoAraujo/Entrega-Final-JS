@@ -19,9 +19,11 @@
             <div class="containerSecciones">
                 <ul>
                     <li class="itemNav"><a href="../sections/ingresarPaciente.html">Ingresar Paciente</a></li>
+                    <li class="itemNav"><a href="../sections/reingresarPaciente.html">Reingresar Paciente</a></li>
                     <li class="itemNav"><a href="../sections/verPaciente.html">Ver Paciente</a></li>
                     <li class="itemNav"><a href="../sections/evolucionPaciente.html">Evolución de Paciente</a></li>
                     <li class="itemNav"><a href="../sections/egresos.html">Egresos</a></li>
+                    <li class="itemNav"><a href="../sections/equipoTratante.html">Equipo Tratante</a></li>
                 </ul>
             </div>
         </nav>
@@ -55,12 +57,12 @@
                         <input class="inputIngreso" type="number" name="habitacion" id="habitacion">
                     </div>
                     <div>
-                        <label for="medico">Médico a cargo</label>
-                        <input class="inputIngreso" type="text" name="medico" id="medico">
-                    </div>
-                    <div>
                         <label for="diagnostico">Diagnóstico</label>
                         <textarea class="inputIngreso" name="diagnostico" id="diagnostico" cols="50" rows="2"></textarea>
+                    </div>
+                    <div>
+                        <label for="medico">Médico a cargo</label>
+                        <input class="inputIngreso" type="text" name="medico" id="medico">
                     </div>
                     <div class="containerBtn">
                         <input class="inputRegistrar" id="registrarPaciente" type="submit" value="Registrar Paciente">
@@ -69,6 +71,7 @@
             </form>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../main.js"></script>
 </body>
 

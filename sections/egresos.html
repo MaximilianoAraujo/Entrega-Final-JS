@@ -19,9 +19,11 @@
             <div class="containerSecciones">
                 <ul>
                     <li class="itemNav"><a href="../sections/ingresarPaciente.html">Ingresar Paciente</a></li>
+                    <li class="itemNav"><a href="../sections/reingresarPaciente.html">Reingresar Paciente</a></li>
                     <li class="itemNav"><a href="../sections/verPaciente.html">Ver Paciente</a></li>
                     <li class="itemNav"><a href="../sections/evolucionPaciente.html">Evolución de Paciente</a></li>
                     <li class="itemNav"><a href="../sections/egresos.html">Egresos</a></li>
+                    <li class="itemNav"><a href="../sections/equipoTratante.html">Equipo Tratante</a></li>
                 </ul>
             </div>
         </nav>
@@ -36,13 +38,14 @@
             <div>
                 <p class="parrafoSeccion">Ingrese el número de documento del paciente a dar de alta</p>
             </div>
-            <div class="containerBusquedaConsulta">
-                <input class="inputConsulta" id="consultaParaEgreso" type="text" required>
+            <form class="containerBusquedaConsulta">
+                <input class="inputConsulta" id="consultaParaEgreso" type="text">
                 <input class="inputBusquedaConsulta"  id="busquedaParaEgreso" type="submit" value="Buscar">
-            </div>
+            </form>
             <div class="parrafoSeccion" id="egreso" ></div>
         </section>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../main.js"></script>
 </body>
 
