@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-    <title>Consulta |Hospital ANEX|</title>
+    <title>Consulta de Datos |Hospital ANEX|</title>
 </head>
 
 <body>
@@ -36,7 +36,11 @@
         </div>
         <section>
             <div>
-                <P class="parrafoSeccion">Ingrese el número de documento del paciente a consultar</P>
+                <P class="parrafoSeccion">Si no desea ver la lista completa, puede hacer una búsqueda usando el número
+                    de DNI del paciente que desea visualizar</P>
+            </div>
+            <div class="contenedorBotonLista">
+                <button class="botonListaCompleta" id="listaCompleta">Ver Lista Completa</button>
             </div>
             <form class="containerBusquedaConsulta">
                 <input class="inputConsulta" id="consultarPaciente" type="number" name="consultarPaciente">
@@ -46,7 +50,7 @@
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="../main.js"></script>
+    <script src="../verPaciente.js" type="module"></script>
 </body>
 
 </html>

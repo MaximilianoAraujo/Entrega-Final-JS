@@ -11,7 +11,7 @@ body {
 
 .bodyInicio {
     font-family: Poppins;
-    background-image: url(./img/fondoInicio.jpg) ;
+    background-image: url(./img/fondoInicio.jpg);
 }
 
 nav {
@@ -57,10 +57,6 @@ main {
     margin: 0;
 }
 
-/* .containerH2 {
-    padding: 0;
-} */
-
 .containerNav {
     display: flex;
 }
@@ -69,7 +65,7 @@ main {
     width: 10%;
     height: 10%;
     display: block;
-    margin: 1% auto 0   ;
+    margin: 1% auto 0;
     border-radius: 50%;
 }
 
@@ -92,13 +88,6 @@ h1 {
     font-size: 1.4em;
     text-align: center;
 }
-
-/* .h1Inicio {
-    font-family: Poppins;
-    text-align: center;
-    margin-top: 0.1em;
-    font-size: 3.5em;
-} */
 
 h2 {
     background-color: #78a2bd;
@@ -140,7 +129,7 @@ h2 {
 .parrafoSeccion {
     font-size: 1.5em;
     font-family: Poppins;
-    padding: 2em 1.75em;
+    padding: 2em 1.75em 1em;
     text-align: center;
 }
 
@@ -154,7 +143,7 @@ main div div p {
 
 .containerForm {
     width: 50%;
-    margin: 0 auto;
+    margin: 2em auto;
     font-family: Poppins;
 }
 
@@ -174,7 +163,9 @@ label {
     margin-bottom: 5px;
 }
 
-.inputIngreso, .usuarioInicio, .passInicio {
+.inputIngreso,
+.usuarioInicio,
+.passInicio {
     width: 97%;
     padding: 0.2em 0em 0.2em 0.5em;
     margin-bottom: 1em;
@@ -182,7 +173,8 @@ label {
     font-size: 1.25em;
 }
 
-.inputRegistrar, .ingresarInicio {
+.inputRegistrar,
+.ingresarInicio {
     background-color: #45a049;
     color: white;
     font-weight: bold;
@@ -192,7 +184,8 @@ label {
     cursor: pointer;
 }
 
-.inputRegistrar, .ingresarInicio:hover {
+.inputRegistrar,
+.ingresarInicio:hover {
     background-color: #398f3d;
 }
 
@@ -210,6 +203,7 @@ label {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 2em 0;
 }
 
 .inputConsulta {
@@ -219,6 +213,11 @@ label {
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     text-align: center;
+}
+
+.contenedorBotonLista {
+    text-align: center;
+    margin: 2em 0 0;
 }
 
 .inputBusquedaConsulta {
@@ -234,6 +233,27 @@ label {
     cursor: pointer;
 }
 
+.botonListaCompleta {
+    width: 20%;
+    font-size: 1.5em;
+    background-color: #406d92;
+    color: white;
+    font-weight: bold;
+    padding: 0.33em 0em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.parrafoInfo {
+    font-family: Poppins;
+    font-size: 0.7em;
+}
+
+.nombreInfo {
+    font-family: Poppins;
+    font-size: 0.9em;
+}
+
 .estiloMostrarPaciente {
     display: block;
     margin: 0.6em auto;
@@ -241,6 +261,16 @@ label {
     border: 3px solid #78a2bd;
     background-color: #dee7ec;
     font-size: 1.1em;
+    text-align: center;
+}
+
+.estiloMostrarBuscado {
+    display: block;
+    margin: 0.6em auto;
+    width: 50%;
+    border: 3px solid #78a2bd;
+    background-color: #dee7ec;
+    font-size: 0.8em;
     text-align: center;
 }
 
@@ -274,11 +304,6 @@ label {
     font-size: 1.37em;
 }
 
-/* .textoCorrecto {
-    color: green;
-    font-weight: 400;
-} */
-
 .btnCancelar {
     margin: 1em auto 0;
     width: 25%;
@@ -293,7 +318,7 @@ label {
 
 .contenedorDoctores {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
@@ -326,10 +351,52 @@ label {
     height: 175px;
     border: 4px solid #a9d0e9;
     border-radius: 5px;
-    
 }
 
 .estiloVacio {
     border: none;
     background-color: #f0f8ff;
+}
+
+.estiloListaCompleta {
+    display: block;
+    margin: 0.6em auto;
+    width: 100%;
+    border: 3px solid #78a2bd;
+    background-color: #dee7ec;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+table,
+th,
+td {
+    border: 2px solid #0b6799;
+    font-size: 0.8em;
+}
+
+th,
+td {
+    padding: 10px;
+}
+
+.tituloPacientes {
+    
+    text-decoration: solid underline ;
+    margin-bottom: 0.5em;
+    font-size: xx-large;
+}
+
+.estiloDiez {
+    width: 10%;
+    font-size: 1em;
+}
+
+.estiloCincuenta {
+    width: 50%;
+    font-size: 1em;
 }
